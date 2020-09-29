@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PPE3_LCA
 {
-    class Modèle
+    class Modele
     {
         private static LcaGsb maConnexion;
 

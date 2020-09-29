@@ -61,6 +61,12 @@
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FConnex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConnex.Designer.cs">
+      <DependentUpon>FConnex.cs</DependentUpon>
+    </Compile>
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FConnex.resx">
+      <DependentUpon>FConnex.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
