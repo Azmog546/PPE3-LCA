@@ -12,6 +12,7 @@ namespace PPE3_LCA
 {
     public partial class FConnex : Form
     {
+        private int nbEssai=0;
         public FConnex()
         {
             InitializeComponent();
@@ -25,11 +26,17 @@ namespace PPE3_LCA
         private void BtnValider_Click(object sender, EventArgs e)
         {
             string identifiant = txtIdentifiant.Text;
+            string password = txtPassword.Text;
             bool test = Modele.testIdentifiant(identifiant);
             if(test==false)
             {
+                nbEssai += 1;
                 lblEssai.Visible = true;
-                lblEssai.Text = "Essai 1";
+                lblEssai.Text = "Essai "+nbEssai;
+            }
+            else
+            {
+                //
             }
         }
     }
