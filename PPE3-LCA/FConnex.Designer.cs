@@ -35,6 +35,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
+            this.lblEssai = new System.Windows.Forms.Label();
             this.panelConnexion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             // panelConnexion
             // 
             this.panelConnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panelConnexion.Controls.Add(this.lblEssai);
             this.panelConnexion.Controls.Add(this.btnOk);
             this.panelConnexion.Controls.Add(this.btnValider);
             this.panelConnexion.Controls.Add(this.txtPassword);
@@ -108,6 +110,16 @@
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Visible = false;
             // 
+            // lblEssai
+            // 
+            this.lblEssai.AutoSize = true;
+            this.lblEssai.Location = new System.Drawing.Point(74, 168);
+            this.lblEssai.Name = "lblEssai";
+            this.lblEssai.Size = new System.Drawing.Size(35, 13);
+            this.lblEssai.TabIndex = 6;
+            this.lblEssai.Text = "label1";
+            this.lblEssai.Visible = false;
+            // 
             // FConnex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,5 +143,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label lblEssai;
     }
 }

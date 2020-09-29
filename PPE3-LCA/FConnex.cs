@@ -24,7 +24,13 @@ namespace PPE3_LCA
 
         private void BtnValider_Click(object sender, EventArgs e)
         {
-            Modele.TestIdentifiant()
+            string identifiant = txtIdentifiant.Text;
+            bool test = Modele.testIdentifiant(identifiant);
+            if(test==false)
+            {
+                lblEssai.Visible = true;
+                lblEssai.Text = "Essai 1";
+            }
         }
     }
 }

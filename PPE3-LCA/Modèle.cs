@@ -17,8 +17,17 @@ namespace PPE3_LCA
         }
         public static bool testIdentifiant(string unIdentifiant)
         {
-            List<Visiteur> listeVisiteur = maConnexion.Visiteur.ToList();
-            if()
+            List<Visiteur> listeVisiteur = new List<Visiteur>();
+            listeVisiteur = maConnexion.Visiteur.ToList();
+            bool test = false;
+            for(int i=0; i< listeVisiteur.Count(); i++)
+            {
+                if(listeVisiteur[i].identifiant == unIdentifiant)
+                {
+                    test = true;
+                }
+            }
+            return test;
         }
        /* public static Object CompositeurParNationalite(int idNation)
         {
