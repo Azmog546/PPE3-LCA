@@ -60,6 +60,7 @@
             this.panelConnexion.Name = "panelConnexion";
             this.panelConnexion.Size = new System.Drawing.Size(817, 455);
             this.panelConnexion.TabIndex = 1;
+            this.panelConnexion.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelConnexion_Paint);
             // 
             // txtIdentifiant
             // 
@@ -82,6 +83,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(192, 89);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(336, 20);
             this.txtPassword.TabIndex = 3;
             // 
@@ -93,6 +95,7 @@
             this.btnValider.TabIndex = 4;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.BtnValider_Click);
             // 
             // btnOk
             // 
@@ -103,6 +106,7 @@
             this.btnOk.TabIndex = 5;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Visible = false;
             // 
             // FConnex
             // 

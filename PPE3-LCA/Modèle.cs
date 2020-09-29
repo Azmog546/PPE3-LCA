@@ -15,11 +15,12 @@ namespace PPE3_LCA
             /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */
             maConnexion = new LcaGsb();
         }
-       /* public static List<VILLE> listeville()
+        public static bool testIdentifiant(string unIdentifiant)
         {
-            return maConnexion.VILLE.ToList();
+            List<Visiteur> listeVisiteur = maConnexion.Visiteur.ToList();
+            if()
         }
-        public static Object CompositeurParNationalite(int idNation)
+       /* public static Object CompositeurParNationalite(int idNation)
         {
             var LQuery = maConnexion.COMPOSITEUR.ToList()
                            .Where(x => x.idNation == idNation)

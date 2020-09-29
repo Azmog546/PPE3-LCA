@@ -16,5 +16,15 @@ namespace PPE3_LCA
         {
             InitializeComponent();
         }
+
+        private void PanelConnexion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnValider_Click(object sender, EventArgs e)
+        {
+            Modele.TestIdentifiant()
+        }
     }
 }
