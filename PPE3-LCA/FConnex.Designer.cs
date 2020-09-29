@@ -30,7 +30,11 @@
         {
             this.lblIdentifiant = new System.Windows.Forms.Label();
             this.panelConnexion = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIdentifiant = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnValider = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
             this.panelConnexion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,19 +50,59 @@
             // panelConnexion
             // 
             this.panelConnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panelConnexion.Controls.Add(this.textBox1);
+            this.panelConnexion.Controls.Add(this.btnOk);
+            this.panelConnexion.Controls.Add(this.btnValider);
+            this.panelConnexion.Controls.Add(this.txtPassword);
+            this.panelConnexion.Controls.Add(this.lblPassword);
+            this.panelConnexion.Controls.Add(this.txtIdentifiant);
             this.panelConnexion.Controls.Add(this.lblIdentifiant);
             this.panelConnexion.Location = new System.Drawing.Point(-11, 0);
             this.panelConnexion.Name = "panelConnexion";
             this.panelConnexion.Size = new System.Drawing.Size(817, 455);
             this.panelConnexion.TabIndex = 1;
             // 
-            // textBox1
+            // txtIdentifiant
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtIdentifiant.BackColor = System.Drawing.Color.White;
+            this.txtIdentifiant.Location = new System.Drawing.Point(192, 43);
+            this.txtIdentifiant.Name = "txtIdentifiant";
+            this.txtIdentifiant.Size = new System.Drawing.Size(336, 20);
+            this.txtIdentifiant.TabIndex = 1;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(71, 92);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(71, 13);
+            this.lblPassword.TabIndex = 2;
+            this.lblPassword.Text = "Mot de passe";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(192, 89);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(336, 20);
+            this.txtPassword.TabIndex = 3;
+            // 
+            // btnValider
+            // 
+            this.btnValider.Location = new System.Drawing.Point(281, 383);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(75, 23);
+            this.btnValider.TabIndex = 4;
+            this.btnValider.Text = "Valider";
+            this.btnValider.UseVisualStyleBackColor = true;
+            // 
+            // btnOk
+            // 
+            this.btnOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnOk.Location = new System.Drawing.Point(381, 383);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 5;
+            this.btnOk.Text = "OK";
+            this.btnOk.UseVisualStyleBackColor = false;
             // 
             // FConnex
             // 
@@ -78,6 +122,10 @@
 
         private System.Windows.Forms.Label lblIdentifiant;
         private System.Windows.Forms.Panel panelConnexion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdentifiant;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.Button btnOk;
     }
 }
