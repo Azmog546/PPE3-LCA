@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace PPE3_LCA
 {
     class Modele
     {
         private static LcaGsb maConnexion;
+        private static Visiteur utilisateurConnecte;
+        private static bool connexionValide=false;
+
 
         public static void init()
         {
@@ -25,48 +29,78 @@ namespace PPE3_LCA
                 if(listeVisiteur[i].identifiant == unIdentifiant)
                 {
                     test = true;
+                    utilisateurConnecte=listeVisiteur[i];
+                    connexionValide = true;
                 }
             }
             return test;
         }
-       /* public static Object CompositeurParNationalite(int idNation)
-        {
-            var LQuery = maConnexion.COMPOSITEUR.ToList()
-                           .Where(x => x.idNation == idNation)
-                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
-                           .OrderBy(x => x.nomCompositeur);
-            return LQuery.ToList();
 
+        public static bool testPassword(string unMdp)
+        {
+            GetMd5Hash(unMdp);
+            List<Visiteur> listeVisiteur = new List<Visiteur>();
+            listeVisiteur = maConnexion.Visiteur.ToList();
+            bool test = false;
+            for (int i = 0; i < listeVisiteur.Count(); i++)
+            {
+                if (listeVisiteur[i].password == unMdp)
+                {
+                    test = true;
+                }
+            }
+            return test;
+        }
+        private static string GetMd5Hash(string PasswdSaisi)
+        {
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(PasswdSaisi);
+            byte[] hash = (MD5.Create()).ComputeHash(inputBytes);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("x2"));
+            }
+            return sb.ToString();
         }
 
-        public static Object CompositeurTouteNation()
-        {
-            var LQuery = maConnexion.COMPOSITEUR.ToList()
-                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
-                           .OrderBy(x => x.nomCompositeur);
-            return LQuery.ToList();
+        /* public static Object CompositeurParNationalite(int idNation)
+         {
+             var LQuery = maConnexion.COMPOSITEUR.ToList()
+                            .Where(x => x.idNation == idNation)
+                            .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
+                            .OrderBy(x => x.nomCompositeur);
+             return LQuery.ToList();
 
-        }
+         }
 
-        public static Object CompositeurParStyle(int idStyle)
-        {
-            var LQuery = maConnexion.COMPOSITEUR.ToList()
-                           .Where(x => x.idStyle == idStyle)
-                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
-                           .OrderBy(x => x.nomCompositeur);
-            return LQuery.ToList();
+         public static Object CompositeurTouteNation()
+         {
+             var LQuery = maConnexion.COMPOSITEUR.ToList()
+                            .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
+                            .OrderBy(x => x.nomCompositeur);
+             return LQuery.ToList();
 
-        }
+         }
 
-        public static List<STYLE> ListeStyle()
-        {
-            return maConnexion.STYLE.ToList();
-        }
+         public static Object CompositeurParStyle(int idStyle)
+         {
+             var LQuery = maConnexion.COMPOSITEUR.ToList()
+                            .Where(x => x.idStyle == idStyle)
+                            .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
+                            .OrderBy(x => x.nomCompositeur);
+             return LQuery.ToList();
 
-        public static List<NATIONALITE> ListeNationalite()
-        {
-            return maConnexion.NATIONALITE.ToList();
-        }
-        */
+         }
+
+         public static List<STYLE> ListeStyle()
+         {
+             return maConnexion.STYLE.ToList();
+         }
+
+         public static List<NATIONALITE> ListeNationalite()
+         {
+             return maConnexion.NATIONALITE.ToList();
+         }
+         */
     }
 }

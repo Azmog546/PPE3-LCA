@@ -12,7 +12,6 @@ namespace PPE3_LCA
 {
     public partial class FConnex : Form
     {
-        private int nbEssai=0;
         public FConnex()
         {
             InitializeComponent();
@@ -28,15 +27,16 @@ namespace PPE3_LCA
             string identifiant = txtIdentifiant.Text;
             string password = txtPassword.Text;
             bool test = Modele.testIdentifiant(identifiant);
-            if(test==false)
+            bool test1 = Modele.testPassword(password);
+            if(test)
             {
-                nbEssai += 1;
                 lblEssai.Visible = true;
-                lblEssai.Text = "Essai "+nbEssai;
+                lblEssai.Text = "Connexion";
             }
             else
             {
-                //...
+                lblEssai.Visible = true;
+                lblEssai.Text = "Identifiant ou mot de passe incorrect";
             }
         }
     }
