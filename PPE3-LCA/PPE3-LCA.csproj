@@ -67,6 +67,12 @@
     <Compile Include="FConnex.Designer.cs">
       <DependentUpon>FConnex.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFraisEngage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFraisEngage.Designer.cs">
+      <DependentUpon>FFraisEngage.cs</DependentUpon>
+    </Compile>
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
@@ -138,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFraisEngage.resx">
+      <DependentUpon>FFraisEngage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

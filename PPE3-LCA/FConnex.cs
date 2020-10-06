@@ -28,7 +28,7 @@ namespace PPE3_LCA
             string password = txtPassword.Text;
             bool test = Modele.testIdentifiant(identifiant);
             bool test1 = Modele.testPassword(password);
-            if(test)
+            if(test && test1)
             {
                 lblEssai.Visible = true;
                 lblEssai.Text = "Connexion";

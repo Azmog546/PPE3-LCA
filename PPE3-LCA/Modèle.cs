@@ -26,7 +26,7 @@ namespace PPE3_LCA
             bool test = false;
             for(int i=0; i< listeVisiteur.Count(); i++)
             {
-                if(listeVisiteur[i].identifiant == unIdentifiant)
+                if(listeVisiteur[i].identifiant == unIdentifiant && listeVisiteur[i].password == unMdp)
                 {
                     test = true;
                     utilisateurConnecte=listeVisiteur[i];
