@@ -61,6 +61,12 @@
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FGestionRapportsVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGestionRapportsVisite.Designer.cs">
+      <DependentUpon>FGestionRapportsVisite.cs</DependentUpon>
+    </Compile>
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
@@ -129,6 +135,9 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FGestionRapportsVisite.resx">
+      <DependentUpon>FGestionRapportsVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
