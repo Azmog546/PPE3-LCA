@@ -109,6 +109,7 @@
     <Compile Include="MEDICAMENT.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modele1.cs" />
     <Compile Include="Modèle.cs" />
     <Compile Include="MOTIF.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
