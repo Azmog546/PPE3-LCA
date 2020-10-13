@@ -26,11 +26,11 @@ namespace PPE3_LCA
         {
             string identifiant = txtIdentifiant.Text;
             string password = txtPassword.Text;
-            bool test = Modele.testConnexion(identifiant, password);
-            if(test)
+
+            if (Modele.testConnexion(identifiant, password))
             {
                 lblEssai.Visible = true;
-                lblEssai.Text = "Connexion";
+                lblEssai.Text = "Connexion à " + Modele.getUtilisateurConnected().nom;
             }
             else
             {

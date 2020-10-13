@@ -67,7 +67,7 @@
             // lblEssai
             // 
             this.lblEssai.AutoSize = true;
-            this.lblEssai.Location = new System.Drawing.Point(178, 135);
+            this.lblEssai.Location = new System.Drawing.Point(23, 140);
             this.lblEssai.Name = "lblEssai";
             this.lblEssai.Size = new System.Drawing.Size(35, 13);
             this.lblEssai.TabIndex = 6;
