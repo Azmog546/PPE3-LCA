@@ -11,38 +11,79 @@ namespace PPE3_LCA
     {
         private static LcaGsb maConnexion;
         private static Visiteur utilisateurConnecte;
-        private static bool connexionValide = false;
+        private static bool connexionValide=true;
 
-
+        public static Visiteur getUtilisateurConnected()
+        {
+            return utilisateurConnecte;
+        }
         public static void init()
         {
             /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */
             maConnexion = new LcaGsb();
         }
+        public static Visiteur getObjetVisiteurAvecIdentifiant(string unIdentifiant)
+        {
+
+            Visiteur leVisiteur = null;
+
+            List<Visiteur> listeVisiteur = new List<Visiteur>();
+            listeVisiteur = maConnexion.Visiteur.ToList();
+
+            for (int i = 0; i < listeVisiteur.Count(); i++)
+            {
+                if (listeVisiteur[i].identifiant == unIdentifiant)
+                {
+
+                    leVisiteur = listeVisiteur[i];
+
+                }
+
+            }
+
+            return leVisiteur;
+
+        }
 
         public static bool testConnexion(string unIdentifiant, string unMdp)
         {
+            bool test = false;
             if (testIdentifiant(unIdentifiant))
             {
-                if(testPassword(unMdp, unIdentifiant))
-                {
 
-                    utilisateurConnecte = getObjetVisiteurAvecIdentifiant(unIdentifiant);
-                    connexionValide = true;
-
-                }
                 
 
+                if (testPassword(unMdp, unIdentifiant))
+                {
+                    utilisateurConnecte = getObjetVisiteurAvecIdentifiant(unIdentifiant);
+                    connexionValide = true;
+                    test = true;
+                }
+                
             }
-            return true;
+            return test;
         }
 
         public static bool testIdentifiant(string unIdentifiant)
         {
-
             bool test = false;
-            
-            if(getObjetVisiteurAvecIdentifiant(unIdentifiant) != null)
+
+            if (getObjetVisiteurAvecIdentifiant(unIdentifiant) != null)
+            {
+                test = true;
+
+            }
+
+            return test;
+        }
+
+        public static bool testPassword(string unMdp, string unIdentifiant)
+        {
+           
+            bool test = false;
+            unMdp = GetMd5Hash(unMdp);
+
+            if (getObjetVisiteurAvecIdentifiant(unIdentifiant).password == unMdp)
             {
                 test = true;
             }
@@ -50,40 +91,6 @@ namespace PPE3_LCA
             return test;
         }
 
-        public static Visiteur getObjetVisiteurAvecIdentifiant(string unIdentifiant)
-        {
-            List<Visiteur> listeVisiteur = new List<Visiteur>();
-            listeVisiteur = maConnexion.Visiteur.ToList();
-
-            Visiteur unVisiteur = null;
-
-            for (int i = 0; i < listeVisiteur.Count(); i++)
-            {
-                if (listeVisiteur[i].identifiant == unIdentifiant)
-                {
-
-                    unVisiteur = listeVisiteur[i];
-
-                }
-            }
-
-            return unVisiteur;
-
-        }
-
-        public static bool testPassword(string unMdp, string unIdentifiant)
-        {
-            GetMd5Hash(unMdp);
-           
-            bool test = false;
-            
-                if (getObjetVisiteurAvecIdentifiant(unIdentifiant).password == unMdp)
-                {
-                    test = true;
-                }
-
-            return test;
-        }
         private static string GetMd5Hash(string PasswdSaisi)
         {
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(PasswdSaisi);
