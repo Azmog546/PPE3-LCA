@@ -11,7 +11,7 @@ namespace PPE3_LCA
     {
         private static LcaGsb maConnexion;
         private static Visiteur utilisateurConnecte;
-        private static bool connexionValide = false;
+        private static bool connexionValide=true;
 
 
         public static void init()
@@ -19,69 +19,36 @@ namespace PPE3_LCA
             /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */
             maConnexion = new LcaGsb();
         }
-
-        public static bool testConnexion(string unIdentifiant, string unMdp)
-        {
-            if (testIdentifiant(unIdentifiant))
-            {
-                if(testPassword(unMdp, unIdentifiant))
-                {
-
-                    utilisateurConnecte = getObjetVisiteurAvecIdentifiant(unIdentifiant);
-                    connexionValide = true;
-
-                }
-                
-
-            }
-            return true;
-        }
-
         public static bool testIdentifiant(string unIdentifiant)
-        {
-
-            bool test = false;
-            
-            if(getObjetVisiteurAvecIdentifiant(unIdentifiant) != null)
-            {
-                test = true;
-            }
-
-            return test;
-        }
-
-        public static Visiteur getObjetVisiteurAvecIdentifiant(string unIdentifiant)
         {
             List<Visiteur> listeVisiteur = new List<Visiteur>();
             listeVisiteur = maConnexion.Visiteur.ToList();
-
-            Visiteur unVisiteur = null;
-
-            for (int i = 0; i < listeVisiteur.Count(); i++)
+            bool test = false;
+            for(int i=0; i< listeVisiteur.Count(); i++)
             {
-                if (listeVisiteur[i].identifiant == unIdentifiant)
+                if(listeVisiteur[i].identifiant == unIdentifiant)
                 {
-
-                    unVisiteur = listeVisiteur[i];
-
+                    test = true;
+                    utilisateurConnecte=listeVisiteur[i];
+                    connexionValide = true;
                 }
             }
-
-            return unVisiteur;
-
+            return test;
         }
 
-        public static bool testPassword(string unMdp, string unIdentifiant)
+        public static bool testPassword(string unMdp)
         {
             GetMd5Hash(unMdp);
-           
+            List<Visiteur> listeVisiteur = new List<Visiteur>();
+            listeVisiteur = maConnexion.Visiteur.ToList();
             bool test = false;
-            
-                if (getObjetVisiteurAvecIdentifiant(unIdentifiant).password == unMdp)
+            for (int i = 0; i < listeVisiteur.Count(); i++)
+            {
+                if (listeVisiteur[i].password == unMdp)
                 {
                     test = true;
                 }
-
+            }
             return test;
         }
         private static string GetMd5Hash(string PasswdSaisi)
