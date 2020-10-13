@@ -10,8 +10,8 @@ namespace PPE3_LCA
     class Modele
     {
         private static LcaGsb maConnexion;
-        private static Visiteur utilisateurConnecte;
-        private static bool connexionValide=false;
+        //private static Visiteur utilisateurConnecte;
+        //private static bool connexionValide=false;
 
 
         public static void init()
@@ -21,7 +21,7 @@ namespace PPE3_LCA
         }
         public static bool testIdentifiant(string unIdentifiant)
         {
-            List<Visiteur> listeVisiteur = new List<Visiteur>();
+            /*List<Visiteur> listeVisiteur = new List<Visiteur>();
             listeVisiteur = maConnexion.Visiteur.ToList();
             bool test = false;
             for(int i=0; i< listeVisiteur.Count(); i++)
@@ -32,8 +32,8 @@ namespace PPE3_LCA
                     utilisateurConnecte=listeVisiteur[i];
                     connexionValide = true;
                 }
-            }
-            return test;
+            }*/
+            return false;
         }
 
         public static bool testPassword(string unMdp)
