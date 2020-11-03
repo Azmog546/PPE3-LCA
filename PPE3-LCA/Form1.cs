@@ -27,5 +27,11 @@ namespace PPE3_LCA
             FConnex FCo = new FConnex();
             FCo.Show();
         }
+
+        private void BtnProfile_Click(object sender, EventArgs e)
+        {
+            FProfil FPro = new FProfil();
+            FPro.Show();
+        }
     }
 }
