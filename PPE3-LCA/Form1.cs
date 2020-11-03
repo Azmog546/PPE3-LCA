@@ -16,5 +16,16 @@ namespace PPE3_LCA
         {
             InitializeComponent();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SeConnecterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FConnex FCo = new FConnex();
+            FCo.Show();
+        }
     }
 }

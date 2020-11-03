@@ -16,7 +16,9 @@ namespace PPE3_LCA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Modele.init();
             Application.Run(new Menu());
+
         }
     }
 }
