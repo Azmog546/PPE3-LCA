@@ -27,5 +27,11 @@ namespace PPE3_LCA
             FConnex FCo = new FConnex();
             FCo.Show();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            FGestionVisite FGv = new FGestionVisite();
+            FGv.Show();
+        }
     }
 }

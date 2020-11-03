@@ -67,6 +67,12 @@
     <Compile Include="FConnex.Designer.cs">
       <DependentUpon>FConnex.cs</DependentUpon>
     </Compile>
+    <Compile Include="FGestionVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGestionVisite.Designer.cs">
+      <DependentUpon>FGestionVisite.cs</DependentUpon>
+    </Compile>
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
@@ -139,6 +145,9 @@
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FGestionVisite.resx">
+      <DependentUpon>FGestionVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +164,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>mdlLCAV1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="mdlLCAV1.edmx.diagram">
       <DependentUpon>mdlLCAV1.edmx</DependentUpon>
     </None>
