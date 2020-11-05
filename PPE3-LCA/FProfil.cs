@@ -24,6 +24,8 @@ namespace PPE3_LCA
             txtNom.Text = utilisateurConnected.nom;
             txtPrenom.Text = utilisateurConnected.prenom;
             txtIdentifiant.Text = utilisateurConnected.identifiant;
+            txtAdresse.Text = utilisateurConnected.rue;
+            txtVille.Text = utilisateurConnected.ville;
             //utilisateurConnected.
         }
 
@@ -32,12 +34,15 @@ namespace PPE3_LCA
             txtNom.Enabled = true;
             txtPrenom.Enabled = true;
             txtIdentifiant.Enabled = true;
+            txtAdresse.Enabled = true;
+            txtVille.Enabled = true;
+
             btnValiderModif.Visible = true;
         }
 
         private void BtnValiderModif_Click(object sender, EventArgs e)
         {
-            ModeleMission1.modifInfoUtilisateur();
+            //ModeleMission1.modifInfoUtilisateur(txtNom.Text, txtPrenom.Text, );
         }
     }
 }
