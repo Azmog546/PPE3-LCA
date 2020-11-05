@@ -38,6 +38,7 @@
           <Property Name="id" Type="char" MaxLength="3" Nullable="false" />
           <Property Name="libelle" Type="char" MaxLength="20" />
           <Property Name="montant" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="fraisKilometrique" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Laboratoire">
           <Key>
@@ -531,6 +532,7 @@
           <Property Name="libelle" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
           <Property Name="montant" Type="Decimal" Precision="5" Scale="2" />
           <NavigationProperty Name="LigneFraisForfait" Relationship="Self.FK__LigneFrai__idFra__276EDEB3" FromRole="FraisForfait" ToRole="LigneFraisForfait" />
+          <Property Name="fraisKilometrique" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Laboratoire">
           <Key>
@@ -1011,6 +1013,7 @@
           <EntitySetMapping Name="FraisForfait">
             <EntityTypeMapping TypeName="mdlLCA_GSB_BDD.FraisForfait">
               <MappingFragment StoreEntitySet="FraisForfait">
+                <ScalarProperty Name="fraisKilometrique" ColumnName="fraisKilometrique" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="libelle" ColumnName="libelle" />
                 <ScalarProperty Name="montant" ColumnName="montant" />
