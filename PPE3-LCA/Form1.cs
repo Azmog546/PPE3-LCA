@@ -33,5 +33,11 @@ namespace PPE3_LCA
             FProfil FPro = new FProfil();
             FPro.Show();
         }
+
+        private void BtFrais_Click(object sender, EventArgs e)
+        {
+            FFrais FF = new FFrais();
+            FF.Show();
+        }
     }
 }

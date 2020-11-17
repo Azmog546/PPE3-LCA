@@ -32,6 +32,7 @@
             this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seConnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProfile = new System.Windows.Forms.Button();
+            this.btFrais = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // seConnecterToolStripMenuItem
             // 
             this.seConnecterToolStripMenuItem.Name = "seConnecterToolStripMenuItem";
-            this.seConnecterToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.seConnecterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.seConnecterToolStripMenuItem.Text = "se connecter";
             this.seConnecterToolStripMenuItem.Click += new System.EventHandler(this.SeConnecterToolStripMenuItem_Click);
             // 
@@ -70,11 +71,22 @@
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.BtnProfile_Click);
             // 
+            // btFrais
+            // 
+            this.btFrais.Location = new System.Drawing.Point(713, 76);
+            this.btFrais.Name = "btFrais";
+            this.btFrais.Size = new System.Drawing.Size(75, 23);
+            this.btFrais.TabIndex = 2;
+            this.btFrais.Text = "Frais";
+            this.btFrais.UseVisualStyleBackColor = true;
+            this.btFrais.Click += new System.EventHandler(this.BtFrais_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btFrais);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -94,6 +106,7 @@
         private System.Windows.Forms.ToolStripMenuItem connexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seConnecterToolStripMenuItem;
         private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btFrais;
     }
 }
 
