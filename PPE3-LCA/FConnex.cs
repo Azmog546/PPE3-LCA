@@ -31,6 +31,7 @@ namespace PPE3_LCA
             {
                 lblEssai.Visible = true;
                 lblEssai.Text = "Connexion à " + Modele.getUtilisateurConnected().nom;
+                this.Close();
             }
             else
             {

@@ -17,6 +17,13 @@ namespace PPE3_LCA
         {
             return utilisateurConnecte;
         }
+
+        public static void setUtilisateurConnected(Visiteur unVisiteur)
+        {
+
+            utilisateurConnecte = unVisiteur;
+
+        }
         public static void init()
         {
             /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */

@@ -70,11 +70,23 @@
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FModifMDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FModifMDP.Designer.cs">
+      <DependentUpon>FModifMDP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProfil.Designer.cs">
+      <DependentUpon>FProfil.cs</DependentUpon>
     </Compile>
     <Compile Include="FraisForfait.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
@@ -109,6 +121,7 @@
     <Compile Include="MEDICAMENT.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModeleMission1.cs" />
     <Compile Include="Modèle.cs" />
     <Compile Include="MOTIF.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
@@ -139,8 +152,14 @@
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FModifMDP.resx">
+      <DependentUpon>FModifMDP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProfil.resx">
+      <DependentUpon>FProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
