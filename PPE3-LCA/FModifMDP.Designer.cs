@@ -31,16 +31,19 @@
             this.txtNouvMDP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfMDP = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
+            this.lblErreur = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNouvMDP
             // 
             this.txtNouvMDP.Location = new System.Drawing.Point(15, 47);
             this.txtNouvMDP.Name = "txtNouvMDP";
+            this.txtNouvMDP.PasswordChar = '•';
             this.txtNouvMDP.Size = new System.Drawing.Size(242, 20);
             this.txtNouvMDP.TabIndex = 0;
+            this.txtNouvMDP.TextChanged += new System.EventHandler(this.TxtNouvMDP_TextChanged);
             // 
             // label1
             // 
@@ -60,29 +63,43 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Confirmation mot de passe :";
             // 
-            // textBox1
+            // txtConfMDP
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtConfMDP.Location = new System.Drawing.Point(15, 86);
+            this.txtConfMDP.Name = "txtConfMDP";
+            this.txtConfMDP.PasswordChar = '•';
+            this.txtConfMDP.Size = new System.Drawing.Size(242, 20);
+            this.txtConfMDP.TabIndex = 3;
+            this.txtConfMDP.TextChanged += new System.EventHandler(this.TxtConfMDP_TextChanged);
             // 
             // btnValider
             // 
+            this.btnValider.Enabled = false;
             this.btnValider.Location = new System.Drawing.Point(94, 143);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
             this.btnValider.TabIndex = 4;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.BtnValider_Click);
+            // 
+            // lblErreur
+            // 
+            this.lblErreur.AutoSize = true;
+            this.lblErreur.ForeColor = System.Drawing.Color.Red;
+            this.lblErreur.Location = new System.Drawing.Point(12, 118);
+            this.lblErreur.Name = "lblErreur";
+            this.lblErreur.Size = new System.Drawing.Size(0, 13);
+            this.lblErreur.TabIndex = 5;
             // 
             // FModifMDP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(269, 178);
+            this.Controls.Add(this.lblErreur);
             this.Controls.Add(this.btnValider);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConfMDP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNouvMDP);
@@ -98,7 +115,8 @@
         private System.Windows.Forms.TextBox txtNouvMDP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConfMDP;
         private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.Label lblErreur;
     }
 }

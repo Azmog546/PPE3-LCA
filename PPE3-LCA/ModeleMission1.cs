@@ -12,13 +12,14 @@ namespace PPE3_LCA
         public static void modifInfoUtilisateur(string unNom, string unPrenom, string unIdentifiant, string uneAdresse, string uneVille, string unCodePostal)
         {
 
-            Visiteur unVisiteur = new Visiteur();
+            Visiteur unVisiteur = Modele.getUtilisateurConnected();
             unVisiteur.nom = unNom;
             unVisiteur.prenom = unPrenom;
             unVisiteur.identifiant = unIdentifiant;
             unVisiteur.rue = uneAdresse;
             unVisiteur.ville = uneVille;
-            //unVisiteur
+            unVisiteur.cp = unCodePostal;
+            Modele.setUtilisateurConnected(unVisiteur);
 
         }
 

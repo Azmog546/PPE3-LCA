@@ -18,10 +18,16 @@ namespace PPE3_LCA
             return utilisateurConnecte;
         }
 
+        public static LcaGsb getConnexion()
+        {
+            return maConnexion;
+        }
+
         public static void setUtilisateurConnected(Visiteur unVisiteur)
         {
 
             utilisateurConnecte = unVisiteur;
+            maConnexion.SaveChanges();
 
         }
         public static void init()
@@ -29,6 +35,17 @@ namespace PPE3_LCA
             /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */
             maConnexion = new LcaGsb();
         }
+
+        public static void modifPassword(string unMDP)
+        {
+
+            string MDP = unMDP;
+            MDP = GetMd5Hash(MDP);
+            utilisateurConnecte.password = MDP;
+            maConnexion.SaveChanges();
+
+        }
+
         public static Visiteur getObjetVisiteurAvecIdentifiant(string unIdentifiant)
         {
 

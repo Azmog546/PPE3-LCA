@@ -40,10 +40,11 @@
             this.lblAdresse = new System.Windows.Forms.Label();
             this.txtAdresse = new System.Windows.Forms.TextBox();
             this.txtVille = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblVille = new System.Windows.Forms.Label();
+            this.lblCodePostal = new System.Windows.Forms.Label();
+            this.txtCodePostal = new System.Windows.Forms.TextBox();
+            this.lblDateEmbauche = new System.Windows.Forms.Label();
+            this.lblModifEnreg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNom
@@ -59,6 +60,7 @@
             // 
             this.txtNom.Enabled = false;
             this.txtNom.Location = new System.Drawing.Point(89, 26);
+            this.txtNom.MaxLength = 32;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(100, 20);
             this.txtNom.TabIndex = 1;
@@ -76,6 +78,7 @@
             // 
             this.txtPrenom.Enabled = false;
             this.txtPrenom.Location = new System.Drawing.Point(89, 52);
+            this.txtPrenom.MaxLength = 32;
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(100, 20);
             this.txtPrenom.TabIndex = 3;
@@ -88,6 +91,7 @@
             this.btnModifMDP.TabIndex = 4;
             this.btnModifMDP.Text = "Modifier le mot de passe";
             this.btnModifMDP.UseVisualStyleBackColor = true;
+            this.btnModifMDP.Click += new System.EventHandler(this.BtnModifMDP_Click);
             // 
             // btnModifInfo
             // 
@@ -112,6 +116,7 @@
             // 
             this.txtIdentifiant.Enabled = false;
             this.txtIdentifiant.Location = new System.Drawing.Point(89, 78);
+            this.txtIdentifiant.MaxLength = 16;
             this.txtIdentifiant.Name = "txtIdentifiant";
             this.txtIdentifiant.Size = new System.Drawing.Size(100, 20);
             this.txtIdentifiant.TabIndex = 7;
@@ -140,6 +145,7 @@
             // 
             this.txtAdresse.Enabled = false;
             this.txtAdresse.Location = new System.Drawing.Point(89, 104);
+            this.txtAdresse.MaxLength = 64;
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(100, 20);
             this.txtAdresse.TabIndex = 10;
@@ -148,54 +154,69 @@
             // 
             this.txtVille.Enabled = false;
             this.txtVille.Location = new System.Drawing.Point(89, 130);
+            this.txtVille.MaxLength = 64;
             this.txtVille.Name = "txtVille";
             this.txtVille.Size = new System.Drawing.Size(100, 20);
             this.txtVille.TabIndex = 12;
             // 
-            // label2
+            // lblVille
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Ville :";
+            this.lblVille.AutoSize = true;
+            this.lblVille.Location = new System.Drawing.Point(14, 133);
+            this.lblVille.Name = "lblVille";
+            this.lblVille.Size = new System.Drawing.Size(32, 13);
+            this.lblVille.TabIndex = 11;
+            this.lblVille.Text = "Ville :";
             // 
-            // textBox1
+            // lblCodePostal
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(90, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 14;
+            this.lblCodePostal.AutoSize = true;
+            this.lblCodePostal.Location = new System.Drawing.Point(15, 157);
+            this.lblCodePostal.Name = "lblCodePostal";
+            this.lblCodePostal.Size = new System.Drawing.Size(69, 13);
+            this.lblCodePostal.TabIndex = 13;
+            this.lblCodePostal.Text = "Code postal :";
             // 
-            // label3
+            // txtCodePostal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Ville :";
+            this.txtCodePostal.Enabled = false;
+            this.txtCodePostal.Location = new System.Drawing.Point(89, 156);
+            this.txtCodePostal.MaxLength = 5;
+            this.txtCodePostal.Name = "txtCodePostal";
+            this.txtCodePostal.Size = new System.Drawing.Size(100, 20);
+            this.txtCodePostal.TabIndex = 15;
             // 
-            // textBox2
+            // lblDateEmbauche
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(89, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 15;
+            this.lblDateEmbauche.AutoSize = true;
+            this.lblDateEmbauche.Location = new System.Drawing.Point(15, 192);
+            this.lblDateEmbauche.Name = "lblDateEmbauche";
+            this.lblDateEmbauche.Size = new System.Drawing.Size(72, 13);
+            this.lblDateEmbauche.TabIndex = 16;
+            this.lblDateEmbauche.Text = "Embauché le ";
+            // 
+            // lblModifEnreg
+            // 
+            this.lblModifEnreg.AutoSize = true;
+            this.lblModifEnreg.BackColor = System.Drawing.SystemColors.Control;
+            this.lblModifEnreg.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblModifEnreg.Location = new System.Drawing.Point(31, 247);
+            this.lblModifEnreg.Name = "lblModifEnreg";
+            this.lblModifEnreg.Size = new System.Drawing.Size(144, 13);
+            this.lblModifEnreg.TabIndex = 17;
+            this.lblModifEnreg.Text = "Modifications enregistrées ✅";
             // 
             // FProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(374, 450);
+            this.Controls.Add(this.lblModifEnreg);
+            this.Controls.Add(this.lblDateEmbauche);
+            this.Controls.Add(this.txtCodePostal);
+            this.Controls.Add(this.lblCodePostal);
             this.Controls.Add(this.txtVille);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblVille);
             this.Controls.Add(this.txtAdresse);
             this.Controls.Add(this.lblAdresse);
             this.Controls.Add(this.btnValiderModif);
@@ -207,6 +228,7 @@
             this.Controls.Add(this.lblPrenom);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.lblNom);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FProfil";
             this.Text = "Profil";
             this.Load += new System.EventHandler(this.FProfil_Load);
@@ -229,9 +251,10 @@
         private System.Windows.Forms.Label lblAdresse;
         private System.Windows.Forms.TextBox txtAdresse;
         private System.Windows.Forms.TextBox txtVille;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblVille;
+        private System.Windows.Forms.Label lblCodePostal;
+        private System.Windows.Forms.TextBox txtCodePostal;
+        private System.Windows.Forms.Label lblDateEmbauche;
+        private System.Windows.Forms.Label lblModifEnreg;
     }
 }

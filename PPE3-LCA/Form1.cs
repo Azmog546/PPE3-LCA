@@ -25,13 +25,13 @@ namespace PPE3_LCA
         private void SeConnecterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FConnex FCo = new FConnex();
-            FCo.Show();
+            FCo.ShowDialog();
         }
 
         private void BtnProfile_Click(object sender, EventArgs e)
         {
             FProfil FPro = new FProfil();
-            FPro.Show();
+            FPro.ShowDialog();
         }
     }
 }
