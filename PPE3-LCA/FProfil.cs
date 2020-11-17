@@ -36,6 +36,7 @@ namespace PPE3_LCA
             txtIdentifiant.Enabled = true;
             txtAdresse.Enabled = true;
             txtVille.Enabled = true;
+            txtVille.Enabled = true;
 
             btnValiderModif.Visible = true;
         }
