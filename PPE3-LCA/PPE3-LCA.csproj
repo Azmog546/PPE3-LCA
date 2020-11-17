@@ -58,6 +58,12 @@
     <Compile Include="Etat.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FAfficheFrais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAfficheFrais.Designer.cs">
+      <DependentUpon>FAfficheFrais.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
@@ -155,6 +161,9 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FAfficheFrais.resx">
+      <DependentUpon>FAfficheFrais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
     </EmbeddedResource>

@@ -78,7 +78,6 @@ namespace PPE3_LCA
             if (getObjetVisiteurAvecIdentifiant(unIdentifiant) != null)
             {
                 test = true;
-
             }
 
             return test;

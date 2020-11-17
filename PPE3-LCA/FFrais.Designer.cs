@@ -53,7 +53,7 @@
             // 
             // btnAffiche
             // 
-            this.btnAffiche.Location = new System.Drawing.Point(13, 62);
+            this.btnAffiche.Location = new System.Drawing.Point(13, 51);
             this.btnAffiche.Name = "btnAffiche";
             this.btnAffiche.Size = new System.Drawing.Size(102, 23);
             this.btnAffiche.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SpringGreen;
+            this.BackColor = System.Drawing.Color.SlateBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAffiche);
             this.Controls.Add(this.btnModif);
