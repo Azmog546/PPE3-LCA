@@ -17,8 +17,11 @@ namespace PPE3_LCA
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Modele.init();
+            ModeleMission2.init();
             Application.Run(new Menu());
 
+
         }
+
     }
 }

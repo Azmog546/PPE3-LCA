@@ -82,6 +82,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChoixRapport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChoixRapport.Designer.cs">
+      <DependentUpon>FormChoixRapport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FraisForfait.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
@@ -115,6 +121,7 @@
     <Compile Include="MEDICAMENT.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModeleMission2.cs" />
     <Compile Include="Modèle.cs" />
     <Compile Include="MOTIF.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
@@ -151,6 +158,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChoixRapport.resx">
+      <DependentUpon>FormChoixRapport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -165,6 +175,7 @@
       <LastGenOutput>mdlLCAV1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="mdlLCAV1.edmx.diagram">
       <DependentUpon>mdlLCAV1.edmx</DependentUpon>
     </None>

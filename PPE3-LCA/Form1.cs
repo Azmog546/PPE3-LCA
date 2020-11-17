@@ -30,8 +30,8 @@ namespace PPE3_LCA
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            FGestionVisite FGv = new FGestionVisite();
-            FGv.Show();
+            FormChoixRapport FCR = new FormChoixRapport();
+            FCR.Show();
         }
     }
 }
