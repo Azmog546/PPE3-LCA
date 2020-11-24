@@ -50,6 +50,7 @@
             this.btnModif.TabIndex = 1;
             this.btnModif.Text = "Créer/modifier fiche de frais";
             this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.Click += new System.EventHandler(this.BtnModif_Click);
             // 
             // btnAffiche
             // 

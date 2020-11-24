@@ -58,5 +58,11 @@ namespace PPE3_LCA
             FAfficheFrais FAF = new FAfficheFrais();
             FAF.Show();
         }
+
+        private void BtnModif_Click(object sender, EventArgs e)
+        {
+            FRemplirFrais FRF = new FRemplirFrais();
+            FRF.Show();
+        }
     }
 }

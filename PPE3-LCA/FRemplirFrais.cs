@@ -16,5 +16,10 @@ namespace PPE3_LCA
         {
             InitializeComponent();
         }
+
+        private void Lbl1Colonne_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
