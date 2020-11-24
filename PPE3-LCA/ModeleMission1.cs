@@ -23,5 +23,33 @@ namespace PPE3_LCA
 
         }
 
+        public static Object listRegionResponsable(string idVisiteur)
+        {
+
+            LcaGsb maConnexion = Modele.getConnexion();
+
+            var LQuery = maConnexion.Region.ToList()
+                .Where(x => x.idVisiteur == idVisiteur)
+                .Select(x => new { x.libRegion })
+                .OrderBy(x => x.libRegion);
+
+            return LQuery.ToList();
+
+        }
+
+        public static Object listSecteurResponsable(string idVisiteur)
+        {
+
+            LcaGsb maConnexion = Modele.getConnexion();
+
+            var LQuery = maConnexion.Region.ToList()
+                .Where(x => x.idVisiteur == idVisiteur)
+                .Select(x => new { x.libRegion })
+                .OrderBy(x => x.libRegion);
+
+            return LQuery.ToList();
+
+        }
+
     }
 }

@@ -32,6 +32,7 @@
             this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seConnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProfile = new System.Windows.Forms.Button();
+            this.btnMesResp = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,11 +71,22 @@
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.BtnProfile_Click);
             // 
+            // btnMesResp
+            // 
+            this.btnMesResp.Location = new System.Drawing.Point(597, 27);
+            this.btnMesResp.Name = "btnMesResp";
+            this.btnMesResp.Size = new System.Drawing.Size(110, 23);
+            this.btnMesResp.TabIndex = 2;
+            this.btnMesResp.Text = "Mes responsabilités";
+            this.btnMesResp.UseVisualStyleBackColor = true;
+            this.btnMesResp.Click += new System.EventHandler(this.BtnMesResp_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMesResp);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -94,6 +106,7 @@
         private System.Windows.Forms.ToolStripMenuItem connexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seConnecterToolStripMenuItem;
         private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnMesResp;
     }
 }
 

@@ -33,5 +33,11 @@ namespace PPE3_LCA
             FProfil FPro = new FProfil();
             FPro.ShowDialog();
         }
+
+        private void BtnMesResp_Click(object sender, EventArgs e)
+        {
+            FResponsabilite FResp = new FResponsabilite();
+            FResp.ShowDialog();
+        }
     }
 }

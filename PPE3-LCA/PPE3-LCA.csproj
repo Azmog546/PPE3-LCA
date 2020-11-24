@@ -91,6 +91,12 @@
     <Compile Include="FraisForfait.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FResponsabilite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FResponsabilite.Designer.cs">
+      <DependentUpon>FResponsabilite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Laboratoire.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FProfil.resx">
       <DependentUpon>FProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FResponsabilite.resx">
+      <DependentUpon>FResponsabilite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
