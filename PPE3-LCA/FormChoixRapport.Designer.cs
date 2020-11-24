@@ -34,10 +34,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboMedecin = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bsRapport = new System.Windows.Forms.BindingSource(this.components);
             this.bsMedecin = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMedecin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +76,6 @@
             this.cboMedecin.Name = "cboMedecin";
             this.cboMedecin.Size = new System.Drawing.Size(121, 21);
             this.cboMedecin.TabIndex = 3;
-            this.cboMedecin.SelectedIndexChanged += new System.EventHandler(this.CboListePrati_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -85,31 +86,36 @@
             this.button1.Text = "Visualiser";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(612, 328);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Créer";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(381, 328);
+            this.button3.Location = new System.Drawing.Point(612, 328);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Modifier";
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Créer";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(381, 328);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Modifier";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // bsRapport
+            // 
+            this.bsRapport.CurrentChanged += new System.EventHandler(this.BsMedecin_CurrentChanged);
             // 
             // FormChoixRapport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cboMedecin);
             this.Controls.Add(this.label2);
@@ -119,6 +125,7 @@
             this.Text = "FormChoixRapport";
             this.Load += new System.EventHandler(this.FormChoixRapport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMedecin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,8 +139,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboMedecin;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource bsRapport;
         private System.Windows.Forms.BindingSource bsMedecin;
     }
 }

@@ -22,6 +22,13 @@ namespace PPE3_LCA
             /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */
             maConnexion = new LcaGsb();
         }
+
+        public static LcaGsb getMaConnexion()
+        {
+
+            return maConnexion;
+
+        }
         public static Visiteur getObjetVisiteurAvecIdentifiant(string unIdentifiant)
         {
 

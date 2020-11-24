@@ -33,5 +33,6 @@ namespace PPE3_LCA
             FormChoixRapport FCR = new FormChoixRapport();
             FCR.Show();
         }
+      
     }
 }
