@@ -47,5 +47,16 @@ namespace PPE3_LCA
         {
 
         }
+
+        private void FFrais_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAffiche_Click(object sender, EventArgs e)
+        {
+            FAfficheFrais FAF = new FAfficheFrais();
+            FAF.Show();
+        }
     }
 }

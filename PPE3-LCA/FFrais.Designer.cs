@@ -59,6 +59,7 @@
             this.btnAffiche.TabIndex = 2;
             this.btnAffiche.Text = "Affiche fiche frais";
             this.btnAffiche.UseVisualStyleBackColor = true;
+            this.btnAffiche.Click += new System.EventHandler(this.BtnAffiche_Click);
             // 
             // FFrais
             // 
@@ -71,6 +72,7 @@
             this.Controls.Add(this.cbFrais);
             this.Name = "FFrais";
             this.Text = "FFrais";
+            this.Load += new System.EventHandler(this.FFrais_Load);
             this.ResumeLayout(false);
 
         }

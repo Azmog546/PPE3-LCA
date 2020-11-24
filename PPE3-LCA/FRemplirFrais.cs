@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace PPE3_LCA
 {
-    public partial class FAfficheFrais : Form
+    public partial class FRemplirFrais : Form
     {
-        public FAfficheFrais()
+        public FRemplirFrais()
         {
             InitializeComponent();
-        }
-
-        private void FAfficheFrais_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
