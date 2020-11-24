@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvSecteurResp = new System.Windows.Forms.DataGridView();
             this.bsSecteurResp = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegionResp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRegionResp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSecteurResp)).BeginInit();
@@ -87,6 +89,26 @@
             this.dgvSecteurResp.Size = new System.Drawing.Size(240, 150);
             this.dgvSecteurResp.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(97, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Aucune région";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(97, 256);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Aucun secteur";
+            // 
             // FResponsabilite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +118,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvRegionResp);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Name = "FResponsabilite";
             this.Text = "Mes responsabilités";
             this.Load += new System.EventHandler(this.FResponsabilite_Load);
@@ -116,5 +140,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvSecteurResp;
         private System.Windows.Forms.BindingSource bsSecteurResp;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

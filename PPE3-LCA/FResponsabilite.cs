@@ -33,8 +33,8 @@ namespace PPE3_LCA
 
             if(dgvRegionResp.RowCount == 0)
             {
-                //MARCHE PAS
-                //dgvRegionResp.Rows.Add("Aucune région");
+
+                dgvRegionResp.Visible = false;
 
             }
 
@@ -48,6 +48,12 @@ namespace PPE3_LCA
             dgvSecteurResp.Columns["libSecteur"].Visible = true;
             dgvSecteurResp.Columns["libSecteur"].HeaderText = "Nom de la région";
 
+            if (dgvSecteurResp.RowCount == 0)
+            {
+
+                dgvSecteurResp.Visible = false;
+
+            }
 
         }
     }
