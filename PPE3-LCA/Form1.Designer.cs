@@ -33,6 +33,7 @@
             this.seConnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnMesResp = new System.Windows.Forms.Button();
+            this.btnListeVisteur = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,11 +82,22 @@
             this.btnMesResp.UseVisualStyleBackColor = true;
             this.btnMesResp.Click += new System.EventHandler(this.BtnMesResp_Click);
             // 
+            // btnListeVisteur
+            // 
+            this.btnListeVisteur.Location = new System.Drawing.Point(516, 27);
+            this.btnListeVisteur.Name = "btnListeVisteur";
+            this.btnListeVisteur.Size = new System.Drawing.Size(75, 23);
+            this.btnListeVisteur.TabIndex = 3;
+            this.btnListeVisteur.Text = "Liste visiteur";
+            this.btnListeVisteur.UseVisualStyleBackColor = true;
+            this.btnListeVisteur.Click += new System.EventHandler(this.BtnListeVisteur_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnListeVisteur);
             this.Controls.Add(this.btnMesResp);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.menuStrip1);
@@ -107,6 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem seConnecterToolStripMenuItem;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnMesResp;
+        private System.Windows.Forms.Button btnListeVisteur;
     }
 }
 

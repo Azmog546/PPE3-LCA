@@ -70,6 +70,12 @@
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlLCAV1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FListeVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FListeVisiteur.Designer.cs">
+      <DependentUpon>FListeVisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FModifMDP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </Compile>
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FListeVisiteur.resx">
+      <DependentUpon>FListeVisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FModifMDP.resx">
       <DependentUpon>FModifMDP.cs</DependentUpon>

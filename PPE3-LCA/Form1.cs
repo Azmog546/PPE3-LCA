@@ -39,5 +39,11 @@ namespace PPE3_LCA
             FResponsabilite FResp = new FResponsabilite();
             FResp.ShowDialog();
         }
+
+        private void BtnListeVisteur_Click(object sender, EventArgs e)
+        {
+            FListeVisiteur FListV = new FListeVisiteur();
+            FListV.ShowDialog();
+        }
     }
 }
