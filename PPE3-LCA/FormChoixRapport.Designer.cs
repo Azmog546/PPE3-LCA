@@ -105,9 +105,9 @@
             this.button2.Text = "Modifier";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // bsRapport
+            // bsMedecin
             // 
-            this.bsRapport.CurrentChanged += new System.EventHandler(this.BsMedecin_CurrentChanged);
+            this.bsMedecin.CurrentChanged += new System.EventHandler(this.BsMedecin_CurrentChanged);
             // 
             // FormChoixRapport
             // 

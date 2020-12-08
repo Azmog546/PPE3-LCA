@@ -12,30 +12,27 @@ namespace PPE3_LCA
 {
     public partial class FormChoixRapport : Form
     {
+
+        public static void init()
+        {
+             List<Visiteur> malist = Modele.getMaConnexion().Visiteur.ToList();
+        }
         public FormChoixRapport()
         {
             InitializeComponent();
         }
 
-        private void FormChoixRapport_Load(object sender, EventArgs e)
+
+            private void FormChoixRapport_Load(object sender, EventArgs e)
         {
+
+            dgvRapport.DataSource = bsRapport.DataSource;
             cboMedecin.ValueMember = "idMedecin";
             cboMedecin.DisplayMember = "nom";
-            bsRapport.DataSource = ModeleMission2.listeMedecin();
-            cboMedecin.DataSource = bsRapport;
+            bsMedecin.DataSource = ModeleMission2.listeMedecin();
+            cboMedecin.DataSource = bsMedecin;
+
         }
-
-        /*   private void CboMedecin_SelectedIndexChanged(object sender, EventArgs e)
-           {
-               bsMedecin.DataSource = ModeleMission2.RapportParMedecin(int.Parse(cboMedecin.SelectedValue.ToString()));
-               dgvRapport.DataSource = bsMedecin;
-               dgvRapport.Columns[0].HeaderText = "idRapport";
-               dgvRapport.Columns[1].HeaderText = "dateRapport";
-               dgvRapport.Columns[2].HeaderText = "idModif";
-               dgvRapport.Columns[3].HeaderText = "bilan";
-
-           }
-           */
 
 
         private void Button3_Click(object sender, EventArgs e)
@@ -48,7 +45,8 @@ namespace PPE3_LCA
         {
             bool fermeture = false;
             if (fermeture) return;
-            bsRapport.DataSource = ((MEDECIN)bsMedecin.Current).RAPPORT.ToList().OrderBy(y => y.idRapport).ThenBy(y => y.dateRapport).ToList ();
+            // bsRapport.DataSource = RapportParMedecin(int.Parse(cboMedecin.SelectedValue));
+            bsRapport.DataSource = ((MEDECIN)bsMedecin.Current).RAPPORT.ToList().OrderBy(y => y.idRapport).ThenBy(y => y.dateRapport).ToList();
             dgvRapport.DataSource = bsRapport;
             //Modification des colonnes de la grille
             for (int i = 0; i < dgvRapport.ColumnCount; i++)
@@ -62,5 +60,6 @@ namespace PPE3_LCA
             dgvRapport.Columns["dateRapport"].HeaderText = "Date Rapport";
             dgvRapport.Columns["dateRapport"].DisplayIndex = 1;
         }
+    
     }
 }
