@@ -37,28 +37,30 @@
             this.lblMois = new System.Windows.Forms.Label();
             this.txtMois = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblrepas = new System.Windows.Forms.Label();
-            this.txtNuitéQte = new System.Windows.Forms.TextBox();
-            this.lblQte = new System.Windows.Forms.Label();
+            this.lbl1Colonne = new System.Windows.Forms.Label();
             this.lblKilo = new System.Windows.Forms.Label();
-            this.txtRepasQte = new System.Windows.Forms.TextBox();
             this.txtKm = new System.Windows.Forms.TextBox();
-            this.txtNuitéTotal = new System.Windows.Forms.TextBox();
-            this.txtRepasTotal = new System.Windows.Forms.TextBox();
+            this.lblrepas = new System.Windows.Forms.Label();
+            this.lblQte = new System.Windows.Forms.Label();
+            this.lblNuité = new System.Windows.Forms.Label();
+            this.txtMontantRepas = new System.Windows.Forms.TextBox();
+            this.txtRepasQte = new System.Windows.Forms.TextBox();
             this.txtKmTotal = new System.Windows.Forms.TextBox();
             this.txtNuitMontant = new System.Windows.Forms.TextBox();
-            this.txtMontantRepas = new System.Windows.Forms.TextBox();
-            this.txtMontantKm = new System.Windows.Forms.TextBox();
-            this.lbl1Colonne = new System.Windows.Forms.Label();
-            this.lblNuité = new System.Windows.Forms.Label();
+            this.txtRepasTotal = new System.Windows.Forms.TextBox();
+            this.txtNuitéQte = new System.Windows.Forms.TextBox();
             this.lblMontantUnitaire = new System.Windows.Forms.Label();
+            this.txtNuitéTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.txtMontantKm = new System.Windows.Forms.TextBox();
             this.BtnAjout = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbVehicule = new System.Windows.Forms.ComboBox();
+            this.dgvAfficheVehicule = new System.Windows.Forms.DataGridView();
+            this.numKm = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAfficheVehicule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numKm)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVisiteur
@@ -134,7 +136,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.36122F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.63879F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Controls.Add(this.lbl1Colonne, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblKilo, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtKm, 1, 3);
@@ -156,137 +158,137 @@
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.64286F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.35714F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(517, 112);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(517, 106);
             this.tableLayoutPanel1.TabIndex = 24;
-            // 
-            // lblrepas
-            // 
-            this.lblrepas.AutoSize = true;
-            this.lblrepas.Location = new System.Drawing.Point(4, 45);
-            this.lblrepas.Name = "lblrepas";
-            this.lblrepas.Size = new System.Drawing.Size(60, 13);
-            this.lblrepas.TabIndex = 10;
-            this.lblrepas.Text = "Repas Midi";
-            // 
-            // txtNuitéQte
-            // 
-            this.txtNuitéQte.Location = new System.Drawing.Point(84, 24);
-            this.txtNuitéQte.Name = "txtNuitéQte";
-            this.txtNuitéQte.Size = new System.Drawing.Size(138, 20);
-            this.txtNuitéQte.TabIndex = 11;
-            // 
-            // lblQte
-            // 
-            this.lblQte.AutoSize = true;
-            this.lblQte.Location = new System.Drawing.Point(84, 1);
-            this.lblQte.Name = "lblQte";
-            this.lblQte.Size = new System.Drawing.Size(47, 13);
-            this.lblQte.TabIndex = 12;
-            this.lblQte.Text = "Quantité";
-            // 
-            // lblKilo
-            // 
-            this.lblKilo.AutoSize = true;
-            this.lblKilo.Location = new System.Drawing.Point(4, 82);
-            this.lblKilo.Name = "lblKilo";
-            this.lblKilo.Size = new System.Drawing.Size(62, 13);
-            this.lblKilo.TabIndex = 13;
-            this.lblKilo.Text = "Kilométrage";
-            // 
-            // txtRepasQte
-            // 
-            this.txtRepasQte.Location = new System.Drawing.Point(84, 48);
-            this.txtRepasQte.Name = "txtRepasQte";
-            this.txtRepasQte.Size = new System.Drawing.Size(138, 20);
-            this.txtRepasQte.TabIndex = 14;
-            // 
-            // txtKm
-            // 
-            this.txtKm.Location = new System.Drawing.Point(84, 85);
-            this.txtKm.Name = "txtKm";
-            this.txtKm.Size = new System.Drawing.Size(138, 20);
-            this.txtKm.TabIndex = 15;
-            // 
-            // txtNuitéTotal
-            // 
-            this.txtNuitéTotal.Location = new System.Drawing.Point(367, 24);
-            this.txtNuitéTotal.Name = "txtNuitéTotal";
-            this.txtNuitéTotal.Size = new System.Drawing.Size(146, 20);
-            this.txtNuitéTotal.TabIndex = 18;
-            // 
-            // txtRepasTotal
-            // 
-            this.txtRepasTotal.Location = new System.Drawing.Point(367, 48);
-            this.txtRepasTotal.Name = "txtRepasTotal";
-            this.txtRepasTotal.Size = new System.Drawing.Size(146, 20);
-            this.txtRepasTotal.TabIndex = 19;
-            // 
-            // txtKmTotal
-            // 
-            this.txtKmTotal.Location = new System.Drawing.Point(367, 85);
-            this.txtKmTotal.Name = "txtKmTotal";
-            this.txtKmTotal.Size = new System.Drawing.Size(146, 20);
-            this.txtKmTotal.TabIndex = 20;
-            // 
-            // txtNuitMontant
-            // 
-            this.txtNuitMontant.Location = new System.Drawing.Point(229, 24);
-            this.txtNuitMontant.Name = "txtNuitMontant";
-            this.txtNuitMontant.Size = new System.Drawing.Size(127, 20);
-            this.txtNuitMontant.TabIndex = 21;
-            // 
-            // txtMontantRepas
-            // 
-            this.txtMontantRepas.Location = new System.Drawing.Point(229, 48);
-            this.txtMontantRepas.Name = "txtMontantRepas";
-            this.txtMontantRepas.Size = new System.Drawing.Size(127, 20);
-            this.txtMontantRepas.TabIndex = 22;
-            // 
-            // txtMontantKm
-            // 
-            this.txtMontantKm.Location = new System.Drawing.Point(229, 85);
-            this.txtMontantKm.Name = "txtMontantKm";
-            this.txtMontantKm.Size = new System.Drawing.Size(127, 20);
-            this.txtMontantKm.TabIndex = 23;
             // 
             // lbl1Colonne
             // 
             this.lbl1Colonne.AutoSize = true;
             this.lbl1Colonne.Location = new System.Drawing.Point(4, 1);
             this.lbl1Colonne.Name = "lbl1Colonne";
-            this.lbl1Colonne.Size = new System.Drawing.Size(53, 19);
+            this.lbl1Colonne.Size = new System.Drawing.Size(53, 20);
             this.lbl1Colonne.TabIndex = 8;
             this.lbl1Colonne.Text = "Frais Forfaitaire";
             this.lbl1Colonne.Click += new System.EventHandler(this.Lbl1Colonne_Click);
             // 
+            // lblKilo
+            // 
+            this.lblKilo.AutoSize = true;
+            this.lblKilo.Location = new System.Drawing.Point(4, 76);
+            this.lblKilo.Name = "lblKilo";
+            this.lblKilo.Size = new System.Drawing.Size(62, 13);
+            this.lblKilo.TabIndex = 13;
+            this.lblKilo.Text = "Kilométrage";
+            // 
+            // txtKm
+            // 
+            this.txtKm.Location = new System.Drawing.Point(83, 79);
+            this.txtKm.Name = "txtKm";
+            this.txtKm.Size = new System.Drawing.Size(137, 20);
+            this.txtKm.TabIndex = 15;
+            // 
+            // lblrepas
+            // 
+            this.lblrepas.AutoSize = true;
+            this.lblrepas.Location = new System.Drawing.Point(4, 48);
+            this.lblrepas.Name = "lblrepas";
+            this.lblrepas.Size = new System.Drawing.Size(60, 13);
+            this.lblrepas.TabIndex = 10;
+            this.lblrepas.Text = "Repas Midi";
+            // 
+            // lblQte
+            // 
+            this.lblQte.AutoSize = true;
+            this.lblQte.Location = new System.Drawing.Point(83, 1);
+            this.lblQte.Name = "lblQte";
+            this.lblQte.Size = new System.Drawing.Size(47, 13);
+            this.lblQte.TabIndex = 12;
+            this.lblQte.Text = "Quantité";
+            // 
             // lblNuité
             // 
             this.lblNuité.AutoSize = true;
-            this.lblNuité.Location = new System.Drawing.Point(4, 21);
+            this.lblNuité.Location = new System.Drawing.Point(4, 22);
             this.lblNuité.Name = "lblNuité";
             this.lblNuité.Size = new System.Drawing.Size(32, 13);
             this.lblNuité.TabIndex = 9;
             this.lblNuité.Text = "Nuité";
             // 
+            // txtMontantRepas
+            // 
+            this.txtMontantRepas.Location = new System.Drawing.Point(227, 51);
+            this.txtMontantRepas.Name = "txtMontantRepas";
+            this.txtMontantRepas.Size = new System.Drawing.Size(127, 20);
+            this.txtMontantRepas.TabIndex = 22;
+            // 
+            // txtRepasQte
+            // 
+            this.txtRepasQte.Location = new System.Drawing.Point(83, 51);
+            this.txtRepasQte.Name = "txtRepasQte";
+            this.txtRepasQte.Size = new System.Drawing.Size(137, 20);
+            this.txtRepasQte.TabIndex = 14;
+            // 
+            // txtKmTotal
+            // 
+            this.txtKmTotal.Location = new System.Drawing.Point(365, 79);
+            this.txtKmTotal.Name = "txtKmTotal";
+            this.txtKmTotal.Size = new System.Drawing.Size(146, 20);
+            this.txtKmTotal.TabIndex = 20;
+            // 
+            // txtNuitMontant
+            // 
+            this.txtNuitMontant.Location = new System.Drawing.Point(227, 25);
+            this.txtNuitMontant.Name = "txtNuitMontant";
+            this.txtNuitMontant.Size = new System.Drawing.Size(127, 20);
+            this.txtNuitMontant.TabIndex = 21;
+            // 
+            // txtRepasTotal
+            // 
+            this.txtRepasTotal.Location = new System.Drawing.Point(365, 51);
+            this.txtRepasTotal.Name = "txtRepasTotal";
+            this.txtRepasTotal.Size = new System.Drawing.Size(146, 20);
+            this.txtRepasTotal.TabIndex = 19;
+            // 
+            // txtNuitéQte
+            // 
+            this.txtNuitéQte.Location = new System.Drawing.Point(83, 25);
+            this.txtNuitéQte.Name = "txtNuitéQte";
+            this.txtNuitéQte.Size = new System.Drawing.Size(137, 20);
+            this.txtNuitéQte.TabIndex = 11;
+            // 
             // lblMontantUnitaire
             // 
             this.lblMontantUnitaire.AutoSize = true;
-            this.lblMontantUnitaire.Location = new System.Drawing.Point(229, 1);
+            this.lblMontantUnitaire.Location = new System.Drawing.Point(227, 1);
             this.lblMontantUnitaire.Name = "lblMontantUnitaire";
             this.lblMontantUnitaire.Size = new System.Drawing.Size(83, 13);
             this.lblMontantUnitaire.TabIndex = 16;
             this.lblMontantUnitaire.Text = "Montant unitaire";
             // 
+            // txtNuitéTotal
+            // 
+            this.txtNuitéTotal.Location = new System.Drawing.Point(365, 25);
+            this.txtNuitéTotal.Name = "txtNuitéTotal";
+            this.txtNuitéTotal.Size = new System.Drawing.Size(146, 20);
+            this.txtNuitéTotal.TabIndex = 18;
+            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(367, 1);
+            this.lblTotal.Location = new System.Drawing.Point(365, 1);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
             this.lblTotal.TabIndex = 17;
             this.lblTotal.Text = "Total";
+            // 
+            // txtMontantKm
+            // 
+            this.txtMontantKm.Location = new System.Drawing.Point(227, 79);
+            this.txtMontantKm.Name = "txtMontantKm";
+            this.txtMontantKm.Size = new System.Drawing.Size(127, 20);
+            this.txtMontantKm.TabIndex = 23;
             // 
             // BtnAjout
             // 
@@ -296,6 +298,7 @@
             this.BtnAjout.TabIndex = 25;
             this.BtnAjout.Text = "Ajouter";
             this.BtnAjout.UseVisualStyleBackColor = true;
+            this.BtnAjout.Click += new System.EventHandler(this.BtnAjout_Click);
             // 
             // btnSupprimer
             // 
@@ -306,29 +309,42 @@
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbVehicule
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(193, 343);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 27;
+            this.cbVehicule.FormattingEnabled = true;
+            this.cbVehicule.Location = new System.Drawing.Point(111, 343);
+            this.cbVehicule.Name = "cbVehicule";
+            this.cbVehicule.Size = new System.Drawing.Size(121, 21);
+            this.cbVehicule.TabIndex = 27;
             // 
-            // dataGridView1
+            // dgvAfficheVehicule
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(111, 375);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(611, 150);
-            this.dataGridView1.TabIndex = 28;
+            this.dgvAfficheVehicule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAfficheVehicule.Location = new System.Drawing.Point(111, 375);
+            this.dgvAfficheVehicule.Name = "dgvAfficheVehicule";
+            this.dgvAfficheVehicule.Size = new System.Drawing.Size(611, 150);
+            this.dgvAfficheVehicule.TabIndex = 28;
+            // 
+            // numKm
+            // 
+            this.numKm.Location = new System.Drawing.Point(289, 343);
+            this.numKm.Maximum = new decimal(new int[] {
+            1569325056,
+            23283064,
+            0,
+            0});
+            this.numKm.Name = "numKm";
+            this.numKm.Size = new System.Drawing.Size(84, 20);
+            this.numKm.TabIndex = 29;
             // 
             // FRemplirFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 537);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.numKm);
+            this.Controls.Add(this.dgvAfficheVehicule);
+            this.Controls.Add(this.cbVehicule);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.BtnAjout);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -342,9 +358,11 @@
             this.Controls.Add(this.lblVisiteur);
             this.Name = "FRemplirFrais";
             this.Text = "FRemplirFrais";
+            this.Load += new System.EventHandler(this.FRemplirFrais_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAfficheVehicule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numKm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,7 +397,8 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button BtnAjout;
         private System.Windows.Forms.Button btnSupprimer;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cbVehicule;
+        private System.Windows.Forms.DataGridView dgvAfficheVehicule;
+        private System.Windows.Forms.NumericUpDown numKm;
     }
 }

@@ -21,5 +21,15 @@ namespace PPE3_LCA
         {
 
         }
+
+        private void FRemplirFrais_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAjout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

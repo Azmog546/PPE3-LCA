@@ -20,8 +20,8 @@ namespace PPE3_LCA
         {
             InitializeComponent();
             now = moment.Month;
-            for (int i = 0; i < 12; i++)
-            {
+            for (int i = 0; i < 12; i++)           //Gere l'affichage des mois du combobox dans l'ordre decroissant en partant du mois actuel 
+            {                                                                      
                 mois[i] = (mois[i] + now) % 12;
                 switch (mois[i]) 
                 {

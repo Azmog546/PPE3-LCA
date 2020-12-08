@@ -42,9 +42,7 @@ namespace PPE3_LCA
             {
                 if (listeVisiteur[i].identifiant == unIdentifiant)
                 {
-
                     leVisiteur = listeVisiteur[i];
-
                 }
 
             }

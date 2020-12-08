@@ -31,6 +31,7 @@
             this.cbFrais = new System.Windows.Forms.ComboBox();
             this.btnModif = new System.Windows.Forms.Button();
             this.btnAffiche = new System.Windows.Forms.Button();
+            this.DelFicheFrais = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbFrais
@@ -62,12 +63,22 @@
             this.btnAffiche.UseVisualStyleBackColor = true;
             this.btnAffiche.Click += new System.EventHandler(this.BtnAffiche_Click);
             // 
+            // DelFicheFrais
+            // 
+            this.DelFicheFrais.Location = new System.Drawing.Point(215, 51);
+            this.DelFicheFrais.Name = "DelFicheFrais";
+            this.DelFicheFrais.Size = new System.Drawing.Size(114, 23);
+            this.DelFicheFrais.TabIndex = 3;
+            this.DelFicheFrais.Text = "Supprimer fiche frais";
+            this.DelFicheFrais.UseVisualStyleBackColor = true;
+            // 
             // FFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DelFicheFrais);
             this.Controls.Add(this.btnAffiche);
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.cbFrais);
@@ -83,5 +94,6 @@
         private System.Windows.Forms.ComboBox cbFrais;
         private System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.Button btnAffiche;
+        private System.Windows.Forms.Button DelFicheFrais;
     }
 }
